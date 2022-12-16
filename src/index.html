@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/output.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./img/favicon-removebg-preview-removebg-preview.png"
+    />
+    <script src="./main.js" defer></script>
+    <title>Recipes website in tailwind</title>
+  </head>
+  <body class="font-serif">
+    <div class="grid md:grid-cols-3">
+      <header class="md:col-span-1 md:flex md:justify-end text-right">
+        <nav class="text-right">
+          <div class="flex justify-between items-center">
+            <h1
+              class="font-bold uppercase p-4 hover:text-secondary cursor-pointer translate ease-out duration-300"
+            >
+              Food Ninja
+            </h1>
+            <div class="w-6 px-6 md:hidden cursor-pointer" id="dropdown-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </div>
+          </div>
+          <div>
+            <ul class="text-gray-700 hidden md:block" id="menu">
+              <li class="text-gray-700 text-bold py-1">
+                <a
+                  class="px-4 flex justify-start flex-row-reverse border-r-4 border-secondary"
+                  href="#"
+                >
+                  <svg
+                    class="w-5 ml-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                    />
+                  </svg>
+                  <span>Home</span>
+                </a>
+              </li>
+              <li class="py-1 text-gray-500">
+                <a
+                  href="#"
+                  class="px-4 flex justify-start flex-row-reverse border-r-4 border-white"
+                >
+                  <svg
+                    class="w-5 ml-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"
+                    />
+                  </svg>
+
+                  <span>About</span>
+                </a>
+              </li>
+              <li class="py-1 text-gray-500">
+                <a
+                  href="#"
+                  class="px-4 flex justify-start flex-row-reverse border-r-4 border-white"
+                >
+                  <svg
+                    class="w-5 ml-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8.625 9.75a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 01.778-.332 48.294 48.294 0 005.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
+                    />
+                  </svg>
+                  <span>Contact</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main class="px-16 py-6 md:col-span-2 bg-gray-50">
+        <div class="flex justify-center md:justify-end">
+          <a
+            class="btn border-secondary md:border-2 mr-4 md:hover:bg-secondary md:hover:text-white transition ease-out duration-500"
+            href=""
+          >
+            Login
+          </a>
+          <a
+            class="btn border-secondary md:border-2 md:hover:bg-secondary md:hover:text-white transition ease-out duration-500"
+            href=""
+          >
+            Sign Up
+          </a>
+        </div>
+        <section>
+          <h2 class="text-grey-700 text-6xl font-semibold">Recipes</h2>
+          <h3 class="text-2xl font-semibold">For Ninjas</h3>
+        </section>
+        <section>
+          <h4 class="font-bold mt-6 pb-2 border-b border-grey-700">
+            Latest Recipes
+          </h4>
+          <div class="mt-8 grid lg:grid-cols-3 gap-6">
+            <!-- cards goes here -->
+            <div class="card hover:shadow-lg">
+              <img
+                class="card-img"
+                src="./img/honey-garlic-shrimp.jpeg"
+                alt=""
+              />
+              <div class="text-center m-4">
+                <span class="font-bold">Honey Garlic Shrimp</span>
+                <span class="block">Recipe By Mario</span>
+              </div>
+              <div class="badge">
+                <svg
+                  class="w-5 inline-block"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span>25 min</span>
+              </div>
+            </div>
+            <div class="card hover:shadow-lg">
+              <img class="card-img" src="./img/Chicken-Salad.jpg" alt="" />
+              <div class="text-center m-4">
+                <span class="font-bold"> Chicken Salad</span>
+                <span class="block">Recipe By Haitham</span>
+              </div>
+              <div class="badge">
+                <svg
+                  class="w-5 inline-block"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span>15 min</span>
+              </div>
+            </div>
+            <div class="card hover:shadow-lg">
+              <img class="card-img" src="./img/Hungarian-Chicjen.jpg" alt="" />
+              <div class="text-center m-4">
+                <span class="font-bold">Hunarian Chicken</span>
+                <span class="block">Recipe By Nesma</span>
+              </div>
+              <div class="badge">
+                <svg
+                  class="w-5 inline-block"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span>27 min</span>
+              </div>
+            </div>
+            <div>
+              <h4
+                class="font-bold mt-8 pb-2 border-b border-grey-700 sm:text-center"
+              >
+                Most Popular
+              </h4>
+              <div class="mt-8">
+                <!-- cards goes here -->
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="flex justify-center">
+          <button
+            class="btn text-white bg-darkshade-100 hover:shadow-inner hover:scale-125 hover:bg-opacity-40 translate ease-out duration-500"
+          >
+            Load More
+          </button>
+        </div>
+      </main>
+      <footer></footer>
+    </div>
+  </body>
+</html>
