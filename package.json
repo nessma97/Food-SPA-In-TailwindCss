@@ -67,7 +67,10 @@
   "scripts": {
     "build-css": "tailwindcss build ./src/input.css -o ./dist/output.css"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "tailwindcss",
+    "food app"
+  ],
+  "author": "Nesma Hamdy",
   "license": "ISC"
 }
